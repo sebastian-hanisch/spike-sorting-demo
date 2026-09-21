@@ -12,8 +12,8 @@ Die Pipeline ist im Scoping die **Konvergenz von pca-demo und Clustering-Linie**
 ```
 ica-demo → sobi-demo → sca-demo
 pca-demo + Clustering-Linie → spike-sorting-demo (Standardpipeline)
-                              → Vorlagenabgleich (löst Überlappung auf)      [nicht gebaut]
-                              → Verzögerungsgraph / Clique-Überdeckung      [nicht gebaut]
+                              → template-matching-demo (Vorlagenabgleich: löst Überlappung auf)
+                              → delay-graph-demo (Verzögerungsgraph: Zeitverzögerungen statt Wellenform)
 ```
 
 | Frage | Ergebnis (4 Neuronen, 4 Elektroden, Rauschen 0.05, 20000 Abtastwerte; Mittel über 5 feste Datensätze, Seeds 100000–100004) |
