@@ -11,6 +11,7 @@ neu sind die Regler **Wellenform-Ähnlichkeit** und **Amplitudenschwankung** sow
 Die Pipeline ist im Scoping die **Konvergenz von pca-demo und Clustering-Linie** (PCA als Merkmalsbildung, k-means als Clustering) und der Ausgangspunkt der weiteren Stücke des Zweigs (Vorlagenabgleich für überlappende Spikes; Verzögerungsgraph als anderer Ansatz).
 ```
 ica-demo → sobi-demo → sca-demo
+        ↘ nmf-demo (Nicht-Negativität statt Unabhängigkeit; einkanalfähig)
 pca-demo + Clustering-Linie → spike-sorting-demo (Standardpipeline)
                               → template-matching-demo (Vorlagenabgleich: löst Überlappung auf)
                               → delay-graph-demo (Verzögerungsgraph: Zeitverzögerungen statt Wellenform)
