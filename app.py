@@ -24,6 +24,7 @@ from ss_presets import (
     init_session_state_defaults,
     load_permalink_settings,
     randomize_seed,
+    seed_widget,
     sync_query_params,
 )
 from ss_visualization import (
@@ -182,6 +183,7 @@ with st.sidebar:
         help="Was aus einem Ausschnitt an k-means geht. Mit 4 Elektroden liegt die PCA vorn (Sortiergenauigkeit 0.98 gegen 0.96 Amplituden und 0.95 Rohwerte); mit einer Elektrode sind Spitzenamplituden besser (0.78 gegen 0.65 PCA und 0.57 Rohwerte).",
     )
     if feature == "pca":
+        seed_widget("components_slider")
         n_components = st.slider(
             "PCA-Komponenten", *bounds("components_slider"), key="components_slider",
             help="Wie viele Hauptkomponenten an k-means gehen. Schon eine genügt fast (Sortiergenauigkeit 0.96), 2-3 sind gut (0.98), 5-8 kaum besser (0.99).",
