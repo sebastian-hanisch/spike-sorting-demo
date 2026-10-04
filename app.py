@@ -155,7 +155,7 @@ with st.sidebar:
     similarity = st.slider(
         "Wellenform-Ähnlichkeit", *bounds("similarity_slider"), key="similarity_slider", step=0.05,
         help="1 = die Neuronen haben verschieden breite Spitzen (wie in den anderen Demos), 0 = alle dieselbe Form; dann unterscheiden sie sich nur noch über ihre Amplitudenverhältnisse an den Elektroden. "
-             "Sortiergenauigkeit im Mittel 0.98 (1) gegen 0.89 (0), von Datensatz zu Datensatz stark schwankend (0.73-0.99); mit einer Elektrode bleibt bei Ähnlichkeit 0 nur der Zufall (0.55).",
+             "Sortiergenauigkeit im Mittel 0.98 (1) gegen 0.89 (0), von Datensatz zu Datensatz stark schwankend (0.73-0.99); mit einer Elektrode bleibt bei Ähnlichkeit 0 nur 0.55 (das häufigste Neuron allein käme auf 0.32).",
     )
     jitter = st.slider(
         "Amplitudenschwankung", *bounds("jitter_slider"), key="jitter_slider", step=0.05,
@@ -487,6 +487,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Quellentrennung: von ICA bis Verzögerungsgraph](https://sebastianhanisch.net/konzepte-quellentrennung.html)."
 )
